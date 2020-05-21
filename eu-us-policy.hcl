@@ -17,7 +17,7 @@ allowed_zones_as_regex = [
 main = rule {
     all aws_instances() as _, instances {
       all instances as index, r {
-        all allowed_zones as zi, az 
+        all allowed_zones_as_regex as zi, az 
          r.applied.availability_zone match az
       }
     }
