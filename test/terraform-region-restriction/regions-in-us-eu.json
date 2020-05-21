@@ -6,7 +6,7 @@
           "resources": {
             "aws_instance": {
               "applied": {
-                "availability_zone": "us-east-1"
+                "region": "us-east-1"
               }      
             }
           }
@@ -15,7 +15,7 @@
           "resources": {
             "aws_instance": {
               "applied": {
-                "availability_zone": "eu-central-1"
+                "region": "eu-central-1"
               }      
             }
           }
