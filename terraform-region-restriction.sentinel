@@ -1,0 +1,15 @@
+import "tfplan/v2" as tfplan
+# Get all AWS instances from all modules
+aws_instances = func() {
+    instances = []
+    for tfplan.module_paths as path {
+        append(instances, path.resources.aws_instance.applied.availability_zone)
+    }
+    return instances
+}
+# Rule to restrict availability zones and region
+main = rule {
+  all aws_instances() as _, z {
+    z matches "^us" or z matches "^eu"
+  }
+}

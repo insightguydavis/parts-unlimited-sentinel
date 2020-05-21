@@ -1,0 +1,26 @@
+{
+  "mock": {
+    "tfplan/v2": {
+      "module_paths": [
+        {
+          "resources": {
+            "aws_instance": {
+              "applied": {
+                "availability_zone": "us-east-1"
+              }      
+            }
+          }
+        },
+        {
+          "resources": {
+            "aws_instance": {
+              "applied": {
+                "availability_zone": "eu-central-1"
+              }      
+            }
+          }
+        }
+      ]  
+    }
+  }
+}
